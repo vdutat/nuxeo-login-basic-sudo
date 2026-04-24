@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<component name="com.acme.nuxeo.basicsudoauthentication.config">
+
+  <extension point="authenticators" target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService">
+    <authenticationPlugin name="BASIC_SUDO_AUTH"
+        enabled="true"
+        class="com.acme.nuxeo.auth.BasicSudoAuthenticator">
+      <needStartingURLSaving>false</needStartingURLSaving>
+      <stateful>false</stateful>
+
+      <!-- Critical: trust the user identity produced by the authenticator -->
+      <loginModulePlugin>Trusted_LM</loginModulePlugin>
+
+      <parameters>
+        <parameter name="AllowedGroup">administrators</parameter>
+        <!-- 
+        <parameter name="SudoHeader">X-NXsudo</parameter>
+        <parameter name="OnlyPathPrefix">/nuxeo/api/</parameter>
+         -->
+      </parameters>
+    </authenticationPlugin>
+
+  </extension>
+
+</component>
