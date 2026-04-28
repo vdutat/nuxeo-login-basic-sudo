@@ -1,5 +1,4 @@
 <component name="com.acme.nuxeo.auth.basic-sudo.chain.config">
-  <require>org.nuxeo.ecm.platform.login.mocksaml.auth</require>
   <require>org.nuxeo.ecm.restapi.server.auth.config</require>
 
   <extension

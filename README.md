@@ -6,7 +6,6 @@ This plugin demonstrates how to define a custom authentication plugin name `BASI
 The following XML contribute, which you need to define in your Nuxeo project, adds the authentication plugin `BASIC_SUDO_AUTH` to the authentication chain of the **Nuxeo REST API** and **automation** endpoint:
 ```
 <component name="com.acme.nuxeo.auth.basic-sudo.chain.config">
-  <require>org.nuxeo.ecm.platform.login.mocksaml.auth</require>
   <require>org.nuxeo.ecm.restapi.server.auth.config</require>
 
   <extension
